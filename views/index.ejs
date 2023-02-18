@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input type="text" name = "city" placeholder="enter a city" required class="ghost-input">
+
+                <input type="submit" name="submit" value="Get Weather" class="ghost-button">
+            </form>
+
+            
+            <% if(weather !== null){%>
+               <p><%= weather %></p>
+               <% } %><% if(error !==null){ %>
+                <p><%= error %></p>
+                <% } %>           
+        </fieldset>
+    </div>
+</body>
+</html>
